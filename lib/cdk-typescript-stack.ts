@@ -21,26 +21,32 @@ export class CdkTypescriptStack extends cdk.Stack {
 
     const AJ_VPC = new ec2.Vpc(this, 'VPC', {
       cidr: "192.168.1.0/24",
-      natGateways: 0,
+      natGateways: 1,
       maxAzs: 2,
-      subnetConfiguration: [ec2.subnetconfiguration( 'PUBLIC',ec2.SubnetType.PUBLIC,)]
-
-      
+      //subnetConfiguration: [ec2.subnetconfiguration('PUBLIC',ec2.SubnetType.PUBLIC,)],
+      subnetConfiguration: [{
+        cidrMask: 28,
+        name: 'Public',
+        subnetType: ec2.SubnetType.PUBLIC,
+      }, {
+        cidrMask: 28,
+        name: 'Private',
+        subnetType: ec2.SubnetType.PRIVATE_WITH_NAT,
+      }]   
     })
     //const PublicSecurityGroup = new ec2.SecurityGroup()
       //ENTER CODE
+    
 
-    }
 
-     amazon_linux = ec2.MachineImage.latestAmazonLinux{
-        generation:ec2.AmazonLinuxGeneration.AMAZON_LINUX_2,
-        edition:ec2.AmazonLinuxEdition.STANDARD,
-        virtualization:ec2.AmazonLinuxVirt.HVM,
-        storage:ec2.AmazonLinuxStorage.GENERAL_PURPOSE
-
-     }
+     const amazon_linux = ec2.MachineImage.latestAmazonLinux({
+        generation: ec2.AmazonLinuxGeneration.AMAZON_LINUX_2,
+        edition: ec2.AmazonLinuxEdition.STANDARD,
+        virtualization: ec2.AmazonLinuxVirt.HVM,
+        storage: ec2.AmazonLinuxStorage.GENERAL_PURPOSE
+      })
         
-     instance:ec2.Instance
+     //instance:ec2.Instance
 
     
 
@@ -56,4 +62,4 @@ export class CdkTypescriptStack extends cdk.Stack {
 
     
   }
-
+}
