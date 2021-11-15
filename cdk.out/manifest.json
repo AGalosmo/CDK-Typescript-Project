@@ -1,0 +1,62 @@
+{
+  "version": "14.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CdkTypescriptStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdkTypescriptStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/CdkTypescriptStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:520:26)",
+              "process.emit (events.js:400:28)",
+              "process.emit (domain.js:475:12)",
+              "process.emit (/home/agalosmo/cdk-typescript/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ],
+        "/CdkTypescriptStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:31:27)",
+              "/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/home/agalosmo/cdk-typescript/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:520:26)",
+              "process.emit (events.js:400:28)",
+              "process.emit (domain.js:475:12)",
+              "process.emit (/home/agalosmo/cdk-typescript/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "CdkTypescriptStack"
+    }
+  }
+}
